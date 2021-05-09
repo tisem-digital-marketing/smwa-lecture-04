@@ -3,8 +3,6 @@
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![lifecycle](https://img.shields.io/badge/version-2021-red.svg)]()
 
-**Things with `XXX` need updating**
-
 ## Meta-Information
 
 * Module Maintainer: Lachlan Deer (`@lachlandeer`)
