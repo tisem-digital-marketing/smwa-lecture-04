@@ -1,4 +1,4 @@
-# Social Media and Web Analytics: LECTURE NAME
+# Social Media and Web Analytics: Lecture 4
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![lifecycle](https://img.shields.io/badge/version-2021-red.svg)]()
@@ -8,13 +8,13 @@
 ## Meta-Information
 
 * Module Maintainer: Lachlan Deer (`@lachlandeer`)
-* Course: [Social Media and Web Analytics](https://tisem-digital-marketing.github.io/XXX-smwa)
+* Course: [Social Media and Web Analytics](https://tisem-digital-marketing.github.io/2021-smwa)
 * Institute: Dept of Marketing, Tilburg University
-* Current Version: [XXX edition](https://tisem-digital-marketing.github.io/2021-smwa)
+* Current Version: [2021 edition](https://tisem-digital-marketing.github.io/2021-smwa)
 
 ## Introduction
 
-Slides for the XXX of Social Media and Web Analytics
+Slides for the Lecture 4 of Social Media and Web Analytics
 
 Slides are a xaringan presentation and are built to html and pdf using the Snakemake workflow management system.
 I also manage R's package dependencies with `renv`.
@@ -94,17 +94,6 @@ This will install all the packages we need. It may take a while.
 
 ## Suggested Citation (for the Module)
 
-Deer, Lachlan and de With, Hendrik. 2021. Social Media and Web Analytics: XXX.
+Deer, Lachlan. 2021. Social Media and Web Analytics: Lecture 4.
 Tilburg University.
-url = "https://github.com/tisem-digital-marketing/smwa-lecture-XXX"
-
-## Suggested Citation (Template)
-
-```{r, engine='out', eval = FALSE}
-@misc{smwa-lecture-template,
-      title={"Social Media and Web Analytics: Lecture Slide Template"},
-      author={Lachlan Deer},
-      year={2021},
-      url = "https://github.com/tisem-digital-marketing/smwa-lecture-template"
-}
-```
+url = "https://github.com/tisem-digital-marketing/smwa-lecture-04"
