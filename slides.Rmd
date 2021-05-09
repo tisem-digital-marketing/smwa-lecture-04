@@ -1,5 +1,5 @@
 ---
-title: "MODULE NAME"
+title: "Word of Mouth"
 subtitle: "Social Media and Web Analytics"
 author: "Lachlan Deer"
 institute: "Tilburg University"
@@ -35,11 +35,11 @@ course content here
 Suggested Citation:
 
 ```{r, engine='out', eval = FALSE}
-@misc{ddw2021,
-      title={"Social Media and Web Analytics: Lecture Slide Template"},
+@misc{smwa_2021_l4,
+      title={"Social Media and Web Analytics: Lecture 4 - Word of Mouth"},
       author={Lachlan Deer},
       year={2021},
-      url = "https://github.com/tisem-digital-marketing/smwa-lecture-template"
+      url = "https://github.com/tisem-digital-marketing/smwa-lecture-04"
 }
 ```
 
