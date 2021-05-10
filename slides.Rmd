@@ -120,13 +120,104 @@ Most often we see:
 
 Two papers:
 
-* [Online Word of Mouth and the Performance of New Products][deer]
-  * Deer, Chintagunta and Crawford (2019, Working Paper)
 * [Does Online Word-of-Mouth Increase Demand? (and How?) Evidence from a Natural Experiment][seiler]
   * Seiler, Yao and Wang (2017, Marketing Science)
+* [Online Word of Mouth and the Performance of New Products][deer]
+  * Deer, Chintagunta and Crawford (2019, Working Paper)
+
 
 [seiler]: https://pubsonline.informs.org/doi/abs/10.1287/mksc.2017.1045
 [deer]: https://lachlandeer.github.io/media/deer_jmp.pdf
+
+---
+class: inverse, center, middle
+
+# Does Online Word-of-Mouth Increase Demand? (and How?) Evidence from a Natural Experiment
+
+---
+# Online WoM Redux
+
+**Motivation**: Causal inference is particularly difficult in the realm of online WOM due to the fact that
+firms are not directly in control of the amount of WOM.
+
+**Specific Questions**:
+
+* What is the demand elasticity of demand wrt volume of posts?
+* What is the mechanism through which online WoM influences choice?
+
+**How?**: Natural experiment -- shutdown if Sina Weibo due to political events in mainland China but not HK
+
+* Sina Weibo $\approx$ Chinese Twitter
+
+---
+# Empirical Approach
+
+**Industry**: TV show viewership -- soapies
+
+* Not really **new** products
+
+**Data**:
+
+* TV ratings (i.e. viewership) at episode/city level in mainland China and HK
+* Microblogging activity about each show
+
+**The Natural Experiment**: Censorship block on Sina Weibo
+
+* Large, random shock, unrelated to TV
+* Block in mainland China, **but not** HK
+
+---
+# Difference in Differences
+
+$$
+LogRating_{jt} = \alpha Block_{t} \beta Block_{t} + Mainland_{j} + \delta_j + Weekday_t' \gamma + \varepsilon_{jt}
+$$
+
+For causality ...
+
+* Valid Counterfactual: HK approximates China
+* No Selection on Unobservables: Nothing unobserved driving treatment
+
+---
+# Graphical Evidence I
+
+```{r, echo = FALSE, fig.align = "center", out.width="110%"}
+knitr::include_graphics("figs/seiler_comments.png")
+```
+
+---
+# Graphical Evidence II
+
+```{r, echo = FALSE, fig.align = "center", out.width="110%"}
+knitr::include_graphics("figs/seiler_ratings.png")
+```
+
+---
+# Diff in Diff Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="75%"}
+knitr::include_graphics("figs/seiler_did.png")
+```
+
+---
+# What is the Mechanism?
+
+```{r, echo = FALSE, fig.align = "center", out.width="50%"}
+knitr::include_graphics("figs/seiler_mechanism.png")
+```
+
+--- 
+# Takeaways
+
+* Estimated Volume elasticity: between 0.016 and 0.026
+
+* WoM influnces demand via consumption complementarities 
+  * Can chat about it later online
+
+* Managerial Implications:
+  * Fostering post-show discussion
+  * Doesn't appear to be valence effects 
+    * (maybe because quality is known?)
 
 ---
 class: inverse, center, middle
@@ -466,96 +557,6 @@ Important heterogeneity across movie characterstics:
         * Post-release volume Elasticity of 0.23
 
 * Managerial Implication: Different type of products have different channels thru which WoM matters
-
----
-class: inverse, center, middle
-
-# Does Online Word-of-Mouth Increase Demand? (and How?) Evidence from a Natural Experiment
-
----
-# Online WoM Redux
-
-**Motivation**: Causal inference is particularly difficult in the realm of online WOM due to the fact that
-firms are not directly in control of the amount of WOM.
-
-**Specific Questions**:
-
-* What is the demand elasticity of demand wrt volume of posts?
-* What is the mechanism through which online WoM influences choice?
-
-**How?**: Natural experiment -- shutdown if Sina Weibo due to political events in mainland China but not HK
-
-* Sina Weibo $\approx$ Chinese Twitter
-
----
-# Empirical Approach
-
-**Industry**: TV show viewership -- soapies
-
-* Not really **new** products
-
-**Data**:
-
-* TV ratings (i.e. viewership) at episode/city level in mainland China and HK
-* Microblogging activity about each show
-
-**The Natural Experiment**: Censorship block on Sina Weibo
-
-* Large, random shock, unrelated to TV
-* Block in mainland China, **but not** HK
-
----
-# Difference in Differences
-
-$$
-LogRating_{jt} = \alpha Block_{t} \beta Block_{t} + Mainland_{j} + \delta_j + Weekday_t' \gamma + \varepsilon_{jt}
-$$
-
-For causality ...
-
-* Valid Counterfactual: HK approximates China
-* No Selection on Unobservables: Nothing unobserved driving treatment
-
----
-# Graphical Evidence I
-
-```{r, echo = FALSE, fig.align = "center", out.width="110%"}
-knitr::include_graphics("figs/seiler_comments.png")
-```
-
----
-# Graphical Evidence II
-
-```{r, echo = FALSE, fig.align = "center", out.width="110%"}
-knitr::include_graphics("figs/seiler_ratings.png")
-```
-
----
-# Diff in Diff Results
-
-```{r, echo = FALSE, fig.align = "center", out.width="75%"}
-knitr::include_graphics("figs/seiler_did.png")
-```
-
----
-# What is the Mechanism?
-
-```{r, echo = FALSE, fig.align = "center", out.width="50%"}
-knitr::include_graphics("figs/seiler_mechanism.png")
-```
-
---- 
-# Takeaways
-
-* Estimated Volume elasticity: between 0.016 and 0.026
-
-* WoM influnces demand via consumption complementarities 
-  * Can chat about it later online
-
-* Managerial Implications:
-  * Fostering post-show discussion
-  * Doesn't appear to be valence effects 
-    * (maybe because quality is known?)
 
 ---
 # License & Citation
