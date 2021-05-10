@@ -17,7 +17,9 @@ class: font200
 
 # Learning Goals for this Week
 
-TBD
+1. Explain the challenge in estimating the effects of Word of Mouth (WoM) on demand
+2. Distinguish channels through which WoM can influence demand
+3. Interpret statistical estimates of WoM on demand  
 
 ---
 class: inverse, center, middle
@@ -25,6 +27,7 @@ class: inverse, center, middle
 # Why Word of Mouth Matters
 
 ---
+class: font160
 # What is Word of Mouth Marketing?
 
 Consumer's interest in a company's product or service is reflected in their "daily dialogues"
@@ -35,6 +38,7 @@ Consumer's interest in a company's product or service is reflected in their "dai
   * ... and measurable
 
 ---
+class: font160
 # Types of Word of Mouth 
 
 **Organic word of mouth**:
@@ -52,6 +56,7 @@ Consumer's interest in a company's product or service is reflected in their "dai
 * Distinction is always lurking in the background
 
 ---
+class: font160
 # Social Media Word of Mouth Matters
 
 * Consumers now spend more than 135 mins per day on social media
@@ -66,6 +71,7 @@ Consumer's interest in a company's product or service is reflected in their "dai
     - Only 6% say they have mastered it.
 
 ---
+class: font160
 # Why Social Media Might Matter:
 
 Three mechanisms at play:
@@ -81,6 +87,7 @@ Most often we see:
   * Sentiment often called valence
 
 ---
+class: font160
 # Tweet Volume Measures Awareness and Buzz
 
 * Awareness
@@ -93,16 +100,18 @@ Most often we see:
         * Generally "neutral" in sentiment
 
 ---
-# Sentiment Measures Movie Quality
+class: font160
+# Sentiment Measures Quality
 
 * Sentiment expressed tweet's text provides means to measure quality
 * Tweet Sentiment impacts sales via social learning
     * Quality revealed through interactions with their peers
-    * Relevant if consumer's use these reviews to decide what movie to attend
+    * Relevant if consumer's use these reviews to decide what to attend
 
-* Important to control for other ways consumers learn about movie quality
+* Important to control for other ways consumers learn about quality
 
 ---
+class: font160
 # Why Should We Care?
 
 - Social media can generate awareness, buzz and information diffusion that ultimately influences demand
@@ -114,6 +123,7 @@ Most often we see:
 .center[**Most relevant for new products early in release**]
 
 ---
+class: font160
 # Today's Agenda 
 
 .center[**The effect of Social Media WoM on demand**]
@@ -135,7 +145,8 @@ class: inverse, center, middle
 # Does Online Word-of-Mouth Increase Demand? (and How?) Evidence from a Natural Experiment
 
 ---
-# Online WoM Redux
+class: font160
+# Online WoM & Causality
 
 **Motivation**: Causal inference is particularly difficult in the realm of online WOM due to the fact that
 firms are not directly in control of the amount of WOM.
@@ -150,6 +161,7 @@ firms are not directly in control of the amount of WOM.
 * Sina Weibo $\approx$ Chinese Twitter
 
 ---
+class: font160
 # Empirical Approach
 
 **Industry**: TV show viewership -- soapies
@@ -167,10 +179,14 @@ firms are not directly in control of the amount of WOM.
 * Block in mainland China, **but not** HK
 
 ---
+class: font150
 # Difference in Differences
 
 $$
-LogRating_{jt} = \alpha Block_{t} \beta Block_{t} + Mainland_{j} + \delta_j + Weekday_t' \gamma + \varepsilon_{jt}
+\begin{aligned}
+LogRating_{jt} = \alpha Block_{t}  &+ \beta Mainland_{j} + \delta_j Block_{t} \times Mainland_{j} \\ 
+                                   &+ Weekday_t' \gamma + \varepsilon_{jt}
+\end{aligned}
 $$
 
 For causality ...
@@ -181,14 +197,14 @@ For causality ...
 ---
 # Graphical Evidence I
 
-```{r, echo = FALSE, fig.align = "center", out.width="110%"}
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
 knitr::include_graphics("figs/seiler_comments.png")
 ```
 
 ---
 # Graphical Evidence II
 
-```{r, echo = FALSE, fig.align = "center", out.width="110%"}
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
 knitr::include_graphics("figs/seiler_ratings.png")
 ```
 
@@ -206,7 +222,8 @@ knitr::include_graphics("figs/seiler_did.png")
 knitr::include_graphics("figs/seiler_mechanism.png")
 ```
 
---- 
+---
+class: font160
 # Takeaways
 
 * Estimated Volume elasticity: between 0.016 and 0.026
@@ -232,6 +249,7 @@ knitr::include_graphics("figs/twitter_movies.png")
 ```
 
 ---
+class: font160
 # What This Paper is About
 
 .center[**Quantifying the impact of online WoM on new product performance**]
@@ -249,6 +267,7 @@ knitr::include_graphics("figs/twitter_movies.png")
     - Twitter
 
 ---
+class: font140
 # Twitter & the Movie Industry
 
 - Twitter is main online platform for movies (Twitter, 2014)
@@ -263,7 +282,8 @@ knitr::include_graphics("figs/twitter_movies.png")
     - Over half of movie-going Twitter users share their thoughts on Twitter after they leave the theater.
 
 ---
-# Data Sources
+class: font140
+# Data Sources: Industry
 
 US Movie Industry 2014 & 2015:
 
@@ -280,6 +300,7 @@ Industry Data on:
 5. Ex-ante Box Office Predictions
 
 ---
+class: font160
 # Data Sources: Twitter
 
 Individual tweets about each movie from Twitter’s Historical Powertrack
@@ -294,6 +315,7 @@ Individual tweets about each movie from Twitter’s Historical Powertrack
         - approx 300K per movie
 
 ---
+class: font140
 # From Tweet Content to Tweet Sentiment
 
 * VADER Sentiment Lexicon (Hutto & Gilbert 2014)
@@ -311,6 +333,7 @@ Individual tweets about each movie from Twitter’s Historical Powertrack
 * Outperforms standard ML approaches (Riberio et al, 2016)
 
 ---
+class: font140
 # Classifying Tweets with VADER
 
 * VADER gives a score for each tweet $score \in [{-1}, 1]$
@@ -324,6 +347,7 @@ Individual tweets about each movie from Twitter’s Historical Powertrack
     - Sentiment: positive-negative ratio
 
 ---
+class: font160
 # Structural Model of Movie Demand
 
 * Sliding Window Nested Logit Demand
@@ -338,6 +362,7 @@ Individual tweets about each movie from Twitter’s Historical Powertrack
         * $J_t$ is the set of movies that are currently in cinemas
 
 ---
+class: font160
 # Utility Specification - Movies
 
 $$
@@ -352,6 +377,7 @@ w_j^{(2)}\lambda_{t - r_j} \, + \,
 $$
 
 ---
+class: font160
 # Utility Specification - Movies
 
 $$
@@ -380,6 +406,7 @@ $$
 $$
 
 ---
+class: font160
 # Utility Specification - Movies
 
 $$
@@ -395,6 +422,7 @@ $$
 
 
 ---
+class: font160
 # Utility Specification - Movies
 
 $$
@@ -417,6 +445,7 @@ $$
 
 
 ---
+class: font160
 # Utility Specification - Movies
 
 $$
@@ -448,6 +477,7 @@ $$
   * Variation within genre-day combinations identifying $x_{jt}$
 
 ---
+class: font160
 # Utility Specification - Movies
 
 $$
@@ -470,6 +500,7 @@ Expected Performance Tier Fixed Effects, $\theta_s$
     - high expected performance $\rightarrow$ large ad spend
 
 ---
+class: font160
 # Utility Specification - Movies
 
 $$
@@ -489,6 +520,7 @@ $$
   * Correlated within genre
 
 ---
+class: font160
 # Utility Specification - Outside Good
 
 $$
@@ -530,6 +562,7 @@ knitr::include_graphics("figs/deer_tiers.png")
 ```
 
 ---
+class: font160
 # Takeways
 
 Awareness, buzz and information diffusion channels from online WoM are important determinants of demand
@@ -543,20 +576,41 @@ On average, we find:
 **Effects are small compared to existing literature**
 
 ---
+class: font160
 # Takeways II
 
 Important heterogeneity across movie characterstics:
 
-* Franchise Movies:
-    * Pre-release volume elasticity of 0.17 $\rightarrow$ Buzz
-    * Largest for blockbusters, elasticity of 0.34
-* Non-Franchise:
-    * Small movies $\rightarrow$ information diffusion
-        * Post-release sentument elasticity of 0.7
-    * Medium tier $\rightarrow$ growing awareness
-        * Post-release volume Elasticity of 0.23
+**Franchise Movies**:
+
+* Pre-release volume elasticity of 0.17 $\rightarrow$ Buzz
+* Largest for blockbusters, elasticity of 0.34
+
+**Non-Franchise**:
+
+* Small movies $\rightarrow$ information diffusion
+    * Post-release sentument elasticity of 0.7
+* Medium tier $\rightarrow$ growing awareness
+    * Post-release volume Elasticity of 0.23
 
 * Managerial Implication: Different type of products have different channels thru which WoM matters
+
+---
+class: inverse, center, middle
+
+# Recap
+
+---
+class: font160
+# Recap
+
+* Measuring the effect of organic WoM is difficult
+
+* Mechanisms at play: Awareness, buzz and social learning
+
+* Current literature emphasizes, small but significant effects of WoM on demand
+
+* Mechanisms may be different for different product types
 
 ---
 # License & Citation
