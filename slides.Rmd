@@ -72,7 +72,7 @@ class: font160
 
 ---
 class: font160
-# Why Social Media Might Matter:
+# Why Word of Mouth Might Matter
 
 Three mechanisms at play:
 
@@ -91,8 +91,8 @@ class: font160
 # Tweet Volume Measures Awareness and Buzz
 
 * Awareness
-    * Introduces new consumers to a movie
-    * Reminds consumers about movie
+    * Introduces new consumers to a product
+    * Reminds consumers about product
     * Reinforce traditional advertising
 * Buzz: expressions of anticipation
     * Increase in anticipation $\rightarrow$ increase in volume of posts
@@ -279,7 +279,7 @@ class: font140
     - Nearly twice as likely to see a film within 10 days of its opening
     - 87% of Twitter users recent movie attendance was influenced by tweets
     - 63% heard about movies through social media
-    - Over half of movie-going Twitter users share their thoughts on Twitter after they leave the theater.
+    - Over half of movie-going Twitter users share their thoughts on Twitter after they leave the theatre.
 
 ---
 class: font140
